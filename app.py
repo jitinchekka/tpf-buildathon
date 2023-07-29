@@ -1,3 +1,4 @@
+from database.db import init_database, insert_chat_message, get_chat_history
 import streamlit as st
 import requests
 
@@ -15,11 +16,23 @@ def chatbot_response(input_text):
      
 
 def main():
+    # Initialize the database and chat history table
+    db_connected = init_database()
+
+    if db_connected:
+        print("Database connection successful 🔗")
+    else:
+        print("Database connection failed ❌")
+        st.stop()
+    
+    # Get the chat history from the database
+    chat_history = get_chat_history()
+    
     # Initialize SessionState to store chat history
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
 
-    st.title("Simple Chatbot")
+    st.title("Private GPT")
 
     # Sidebar with settings
     st.sidebar.title("Settings")
@@ -39,6 +52,7 @@ def main():
         unsafe_allow_html=True,
     )
 
+    
     # Main chat section
     user_input = st.text_input("You:", "")
 
@@ -46,10 +60,16 @@ def main():
         response = chatbot_response(user_input)
         st.session_state.chat_history.append(("You", user_input))
         st.session_state.chat_history.append(("PrivateGPT", response["privatePrompt"]))
-        st.session_state.chat_history.append(("Chatbot", response["response"]))
+        insert_chat_message("You", user_input)
+        insert_chat_message("PrivateGPT", response["privatePrompt"])
+        # st.session_state.chat_history.append(("Chatbot", response["response"]))
         user_input = ""  # Clear the user input after sending
 
-    # Display previous chats in a chat-style layout
+    #  # Display previous chats in the sidebar
+    # st.sidebar.subheader("Chat History")
+    # for index, (sender, message) in enumerate(st.session_state.chat_history, 1):
+    #     st.sidebar.button(f"Chat {index}", key=index, on_click=lambda idx=index: show_chat(idx))
+    
     st.subheader("Chat")
     chat_container = st.empty()
 
@@ -59,8 +79,6 @@ def main():
             chat_log += f'<div style="text-align: left; padding-left: 20px; padding: 1.5rem; color:#fff; background-color: #333;">{message}</div>'
         elif  sender == "PrivateGPT":
             chat_log += f'<div style="text-align: left; padding-left: 20px; padding: 1.5rem; color:#fff; background-color: #555;">{message}</div>'
-        else:
-            chat_log += f'<div style="text-align: left; padding-right: 20px; padding: 1.5rem; color:#fff; background-color: #444;">{message}</div>'
 
     chat_container.write(chat_log, unsafe_allow_html=True)
 
