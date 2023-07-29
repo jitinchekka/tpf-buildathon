@@ -14,7 +14,19 @@ def chatbot_response(input_text):
     except requests.exceptions.RequestException as e:
         return f'Error: {e}'
      
-
+def display_chat_history(chat_history):
+    st.subheader("Chat History")
+    chat_container = st.empty()
+    chat_log = ""
+    # Process the chat history to make it more readable and display it
+    for index, (sender, message) in enumerate(chat_history):
+        if sender == "You":
+            chat_log += f'<div style="text-align: left; padding-left: 20px; padding: 1.5rem; color:#fff; background-color: #333;">{message}</div>'
+        elif sender == "PrivateGPT":
+            chat_log += f'<div style="text-align: right; padding-left: 20px; padding: 1.5rem; color:#fff; background-color: #555;">{message}</div>'
+    chat_container.write(chat_log, unsafe_allow_html=True)
+    
+        
 def main():
     # Initialize the database and chat history table
     db_connected = init_database()
@@ -36,7 +48,6 @@ def main():
 
     # Sidebar with settings
     st.sidebar.title("Settings")
-    email = st.sidebar.text_input("Email ID", "")
     # Add more settings as needed
 
     # Apply custom CSS to change the background color
@@ -53,8 +64,23 @@ def main():
     )
 
     
-    # Main chat section
-    user_input = st.text_input("You:", "")
+    # Add a container to hold the textbox
+    container = st.container()
+    container.markdown(
+        """
+        <style>
+        .st-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+    user_input = container.text_input("You:", "",key="text_input")
 
     if st.button("Send"):
         response = chatbot_response(user_input)
@@ -66,22 +92,34 @@ def main():
         user_input = ""  # Clear the user input after sending
 
     #  # Display previous chats in the sidebar
-    # st.sidebar.subheader("Chat History")
+    st.sidebar.subheader("Chat History")
+    st.sidebar.markdown(
+        """
+        <style>
+        .sidebar .sidebar-content {
+            background-color: #333;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+    if st.sidebar.button("Show chat history"):
+        # Show chat history
+        display_chat_history(chat_history)
     # for index, (sender, message) in enumerate(st.session_state.chat_history, 1):
     #     st.sidebar.button(f"Chat {index}", key=index, on_click=lambda idx=index: show_chat(idx))
     
     st.subheader("Chat")
     chat_container = st.empty()
-
     chat_log = ""
     for sender, message in st.session_state.chat_history:
         if sender == "You":
             chat_log += f'<div style="text-align: left; padding-left: 20px; padding: 1.5rem; color:#fff; background-color: #333;">{message}</div>'
         elif  sender == "PrivateGPT":
-            chat_log += f'<div style="text-align: left; padding-left: 20px; padding: 1.5rem; color:#fff; background-color: #555;">{message}</div>'
+             chat_log += f'<div style="text-align: right; padding-left: 20px; padding: 1.5rem; color:#fff; background-color: #555;">{message}</div>'
+
 
     chat_container.write(chat_log, unsafe_allow_html=True)
-
 
 if __name__ == "__main__":
     main()
