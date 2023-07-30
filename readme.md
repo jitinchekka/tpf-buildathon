@@ -17,7 +17,6 @@ This project was built for the <b>Track : Open Innovation</b>
 ## Brief Of Prototype
 This project removes all private information from the prompts given by users and masks or anonymizes them, thus safeguarding their privacy.
 - Masking of personal information: Private GPT automatically identifies and masks personal information, such as names, addresses, or any other sensitive details, before sending the user prompts to the AI models.
-<br>
 - Privacy protection: The project ensures that no personally identifiable information is stored or transmitted to external services, providing a secure and private environment for users.
 - Seamless AI model integration: Private GPT integrates with AI models, such as ChatGPT or Bard, allowing users to obtain relevant and helpful responses without sacrificing their privacy.
 - User-friendly interface: The web application provides an intuitive and easy-to-use interface for users to interact with the AI models and view their anonymized conversations.
@@ -25,6 +24,8 @@ This project removes all private information from the prompts given by users and
 ### Architecture
 ![Architecture](/static/arch.png)
 
+### Private GPT vs OpenAI ChatGPT
+![Private GPT vs OpenAI ChatGPT](/static/privategpt_vs_chatgpt.png)
 ## How it Works
 Private GPT works in two steps:
 1. Local Data Redaction: The user prompt is first redacted locally on your PC using a language model, such as Vicuna or any other good performance open-source LLM, to remove any personal information. The redacted prompt is then sent to the AI model.
