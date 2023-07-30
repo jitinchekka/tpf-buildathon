@@ -3,8 +3,7 @@
 ## Team Details
 ### Team Name :  Team Code Crafters
 ### Team Members : Jitin Krishna Chekka, Kodam Karthik
-### Team Leader Email : 
- [Jitin Krishna Chekka](mailto:jitinchekka2@gmail.com)
+### Team Leader Email :  [Jitin Krishna Chekka](mailto:jitinchekka2@gmail.com)
 
 ## Problem Statement 
 Private GPT is a privacy-focused web application built at the TPF GenAI Rush Buildathon that enables users to interact with AI models, such as ChatGPT or Bard, while ensuring the protection of their personal and sensitive information. This project removes all private information from the prompts given by users and masks or anonymizes them, thus safeguarding their privacy.
