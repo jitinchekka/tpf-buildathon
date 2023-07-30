@@ -25,6 +25,10 @@ def display_chat_history(chat_history):
         elif sender == "PrivateGPT":
             chat_log += f'<div style="text-align: right; padding-left: 20px; padding: 1.5rem; color:#fff; background-color: #555;">{message}</div>'
     chat_container.write(chat_log, unsafe_allow_html=True)
+
+def clear_chat_history():
+    st.session_state.chat_history = []
+
     
         
 def main():
@@ -106,8 +110,9 @@ def main():
     if st.sidebar.button("Show chat history"):
         # Show chat history
         display_chat_history(chat_history)
-    # for index, (sender, message) in enumerate(st.session_state.chat_history, 1):
-    #     st.sidebar.button(f"Chat {index}", key=index, on_click=lambda idx=index: show_chat(idx))
+
+    if st.sidebar.button("Clear chat history"):
+        clear_chat_history()
     
     st.subheader("Chat")
     chat_container = st.empty()
