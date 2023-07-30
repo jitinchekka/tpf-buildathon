@@ -92,7 +92,6 @@ def main():
         st.session_state.chat_history.append(("PrivateGPT", response["privatePrompt"]))
         insert_chat_message("You", user_input)
         insert_chat_message("PrivateGPT", response["privatePrompt"])
-        # st.session_state.chat_history.append(("Chatbot", response["response"]))
         user_input = ""  # Clear the user input after sending
 
     #  # Display previous chats in the sidebar

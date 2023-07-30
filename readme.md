@@ -1,12 +1,16 @@
-# Team Name : Code Crafters
+# Private GPT
+![Logo](/static/privategpt_logo.png)
+## Team Details
+### Team Name :  Team Code Crafters
+### Team Members : Jitin Krishna Chekka, Kodam Karthik
+### Team Leader Email : 
+ [Jitin Krishna Chekka](mailto:jitinchekka2@gmail.com)
 
 ## Problem Statement 
-Private GPT is a privacy-focused web application built at Mercor Startup Gateway Hackathon that enables users to interact with AI models, such as ChatGPT or Bard, while ensuring the protection of their personal and sensitive information. This project removes all private information from the prompts given by users and masks or anonymizes them, thus safeguarding their privacy.
+Private GPT is a privacy-focused web application built at the TPF GenAI Rush Buildathon that enables users to interact with AI models, such as ChatGPT or Bard, while ensuring the protection of their personal and sensitive information. This project removes all private information from the prompts given by users and masks or anonymizes them, thus safeguarding their privacy.
 
 The main goal of Private GPT is to provide users with a secure and private environment to communicate with AI models without compromising their personal data. By removing sensitive information, such as names, locations, Aadhar or other Identity card numbers, financial information or any other identifiable details, users can freely engage in conversations and receive responses from AI models while maintaining their anonymity.
 
-## Team Leader Email : 
-[Jitin Krishna Chekka](mailto:jitinchekka2@gmail.com)
 
 ## Track
 This project was built for the <b>Track : Innovation</b>
