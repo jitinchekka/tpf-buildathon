@@ -12,7 +12,7 @@ The main goal of Private GPT is to provide users with a secure and private envir
 
 
 ## Track
-This project was built for the <b>Track : Innovation</b>
+This project was built for the <b>Track : Open Innovation</b>
 ## Brief Of Prototype
 This project removes all private information from the prompts given by users and masks or anonymizes them, thus safeguarding their privacy.
 - Masking of personal information: Private GPT automatically identifies and masks personal information, such as names, addresses, or any other sensitive details, before sending the user prompts to the AI models.
