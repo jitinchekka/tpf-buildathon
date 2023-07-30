@@ -26,6 +26,9 @@ This project removes all private information from the prompts given by users and
 
 ### Private GPT vs OpenAI ChatGPT
 ![Private GPT vs OpenAI ChatGPT](/static/privategpt_vs_chatgpt.png)
+
+## Redaction and Anonymization in Private GPT
+![Redaction and Anonymization in Private GPT](/static/demo2.png)
 ## How it Works
 Private GPT works in two steps:
 1. Local Data Redaction: The user prompt is first redacted locally on your PC using a language model, such as Vicuna or any other good performance open-source LLM, to remove any personal information. The redacted prompt is then sent to the AI model.
