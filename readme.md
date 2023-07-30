@@ -13,12 +13,17 @@ The main goal of Private GPT is to provide users with a secure and private envir
 
 ## Track
 This project was built for the <b>Track : Open Innovation</b>
+
 ## Brief Of Prototype
 This project removes all private information from the prompts given by users and masks or anonymizes them, thus safeguarding their privacy.
 - Masking of personal information: Private GPT automatically identifies and masks personal information, such as names, addresses, or any other sensitive details, before sending the user prompts to the AI models.
+<br>
 - Privacy protection: The project ensures that no personally identifiable information is stored or transmitted to external services, providing a secure and private environment for users.
 - Seamless AI model integration: Private GPT integrates with AI models, such as ChatGPT or Bard, allowing users to obtain relevant and helpful responses without sacrificing their privacy.
 - User-friendly interface: The web application provides an intuitive and easy-to-use interface for users to interact with the AI models and view their anonymized conversations.
+
+### Architecture
+![Architecture](/static/arch.png)
 
 ## How it Works
 Private GPT works in two steps:
@@ -72,6 +77,24 @@ To run Private GPT project locally, ensure that you have the following dependenc
 2. Open [http://localhost:8501](http://localhost:8501) to view the web application in the browser.
 
 3. Enter your messages in the input field and click "Send" to initiate a conversation with the AI model. Your prompts will be anonymized before being sent to the AI model, ensuring your privacy. You can view the anonymized prompts in the console.
+
+## What I Learnt
+Here are the top 5 key takeaways from building "Private GPT" during the 24-hour TPF GenAI Rush Buildathon with Team Code Crafters:
+1. **Resource Management:** Prioritizing tasks, managing time effectively, and making rapid decisions to meet project requirements within the constraints of the hackathon.
+
+2. **Team Collaboration:** Learning to work efficiently as a team, assigning tasks based on individual strengths, and effectively communicating to achieve project goals within a tight timeframe.
+
+3. **Integration of AI Models:** Gaining hands-on experience in integrating AI models like ChatGPT and Bard into the web application and processing their responses for user interactions.
+
+4. **UI Development with Streamlit:** Building a user-friendly web application using Streamlit and creating interactive interfaces for users to communicate with AI models seamlessly.
+
+5. **Privacy-Focused AI Applications:** Understanding the importance of safeguarding user privacy in AI applications and implementing data redaction and anonymization techniques to protect sensitive information.
+
+These takeaways provided valuable insights into privacy-aware AI development, teamwork, AI model integration, web development, and effective project management under time pressure.
+
+
+## Video Demo
+[![Private GPT Demo](/static/thumbnail.png)](https://www.loom.com/share/573f38e76bb547619c0d1b72da821ffa?sid=734a295a-aa34-4f6f-b7a1-a19540ff9502)
 
 ## Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Contributions are welcome! If you find any issues or have suggestions for improvements, please submit an issue or create a pull request.
