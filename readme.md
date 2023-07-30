@@ -98,7 +98,7 @@ These takeaways provided valuable insights into privacy-aware AI development, te
 
 
 ## Video Demo
-[![Private GPT Demo](/static/thumbnail.png)](https://www.loom.com/share/573f38e76bb547619c0d1b72da821ffa?sid=734a295a-aa34-4f6f-b7a1-a19540ff9502)
+[Private GPT Demo](https://www.loom.com/share/573f38e76bb547619c0d1b72da821ffa?sid=734a295a-aa34-4f6f-b7a1-a19540ff9502)
 
 ## Contributing
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Contributions are welcome! If you find any issues or have suggestions for improvements, please submit an issue or create a pull request.
