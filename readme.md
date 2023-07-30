@@ -1,9 +1,12 @@
 # Team Name : Code Crafters
-# Problem Statement 
+
+## Problem Statement 
 Private GPT is a privacy-focused web application built at Mercor Startup Gateway Hackathon that enables users to interact with AI models, such as ChatGPT or Bard, while ensuring the protection of their personal and sensitive information. This project removes all private information from the prompts given by users and masks or anonymizes them, thus safeguarding their privacy.
 
 The main goal of Private GPT is to provide users with a secure and private environment to communicate with AI models without compromising their personal data. By removing sensitive information, such as names, locations, Aadhar or other Identity card numbers, financial information or any other identifiable details, users can freely engage in conversations and receive responses from AI models while maintaining their anonymity.
-# Team Leader Email : jitinchekka2@gmail.com
+
+## Team Leader Email : 
+[Jitin Krishna Chekka](mailto:jitinchekka2@gmail.com)
 
 ## Track
 This project was built for the <b>Track : Innovation</b>
@@ -37,32 +40,33 @@ Enterprises can use this models on their own servers instead of running on the u
 
 To run Private GPT project locally, ensure that you have the following dependencies installed on your machine:
 
-- Node.js (v12 or above)
-- npm (v6 or above)
+- Python 3.6 or higher
+- Streamlit
+
 
 ### Installation
 
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/anonymous-ai.git
+   git clone https://github.com/jitinchekka/tpf-buildathon.git
 
 2. Navigate to the project directory:
 
    ```shell
-   cd anonymous-ai
+   cd tp-buildathon
 
 3. Install the dependencies:
 
    ```shell
-   npm install
+   pip install -r requirements.txt
 
 ## Usage
 1. Start the development server:
 
    ```shell
-   npm start
-2. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+   streamlit run app.py
+2. Open [http://localhost:8501](http://localhost:8501) to view the web application in the browser.
 
 3. Enter your messages in the input field and click "Send" to initiate a conversation with the AI model. Your prompts will be anonymized before being sent to the AI model, ensuring your privacy. You can view the anonymized prompts in the console.
 
@@ -74,8 +78,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Acknowledgements
 - [OpenAI](https://openai.com/) - For providing the AI models and the inspiration for this project.
-- [React](https://reactjs.org/) - For the JavaScript library used to build the web application.
-- [Axios](https://github.com/axios/axios) - For the promise-based HTTP client used to make API requests.
+- [Streamlit](https://streamlit.io/) - For the open-source framework used to build the web application.
 - [Vicuna-13B](https://github.com/lm-sys/FastChat/tree/main#api) - An open-source chatbot model trained by fine-tuning LLaMA. It is used to perform data redaction and anonymization. This model is also used as a fallback when the AI models are unable to generate a response. Check out the demo [here](https://chat.lmsys.org/).
 
 ## Contact

@@ -121,7 +121,7 @@ def main():
         if sender == "You":
             chat_log += f'<div style="text-align: left; padding-left: 20px; padding: 1.5rem; color:#fff; background-color: #333;">{message}</div>'
         elif  sender == "PrivateGPT":
-             chat_log += f'<div style="text-align: right; padding-left: 20px; padding: 1.5rem; color:#fff; background-color: #555;">{message}</div>'
+             chat_log += f'<div style="text-align: left; padding-left: 20px; padding: 1.5rem; color:#fff; background-color: #555;">{message}</div>'
 
 
     chat_container.write(chat_log, unsafe_allow_html=True)
